@@ -174,10 +174,7 @@
     position: absolute;
     left: 98px;
     top: 94px;
-    width: 23px;
-    height: 16px;
-    @extend %sprite;
-    background-position: 0 0;
+    color: $white;
     @include opacity(0.5);
     &:hover {
       @include opacity(1);
@@ -186,7 +183,6 @@
   .tab-next {
     left: auto;
     right: 98px;
-    background-position: -50px 0;
   }
 }
 
