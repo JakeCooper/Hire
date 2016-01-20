@@ -75,4 +75,9 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
+### Sass template
+.sass-cache/
+*.css.map
+
+
 # Created by .ignore support plugin (hsz.mobi)
