@@ -39,9 +39,10 @@ section,
 button,
 canvas,
 video {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 h1,
 h2,
 h3,
@@ -57,31 +58,37 @@ code,
 th,
 dfn,
 del {
-    font-weight: normal;
-    font-style: normal;
+  font-weight: normal;
+  font-style: normal;
 }
+
 ul,
 ol {
-    list-style: none;
+  list-style: none;
 }
+
 fieldset,
 img {
-    border: none;
+  border: none;
 }
+
 caption,
 th {
-    text-align: left;
+  text-align: left;
 }
+
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
+
 input[type="button"],
 input[type="submit"],
 input[type="reset"],
@@ -92,35 +99,41 @@ input[type="email"],
 input[type="tel"],
 input[type="number"],
 textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
 }
+
 input,
 button,
 textarea {
-    line-height: normal;
-    font-family: $fontFamily;
+  line-height: normal;
+  font-family: $fontFamily;
 }
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
+  -webkit-appearance: none;
 }
+
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
+
 input[type="hidden"],
 [hidden],
 .hidden {
-    display: none;
+  display: none;
 }
+
 textarea {
-    overflow: auto;
-    resize: none;
+  overflow: auto;
+  resize: none;
 }
+
 article,
 aside,
 details,
@@ -131,46 +144,55 @@ header,
 nav,
 section,
 .clearfix {
-    display: block;
+  display: block;
 }
+
 audio,
 canvas,
 video {
-    display: inline-block;
+  display: inline-block;
 }
+
 a > img {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
+
 strong,
 .strong,
 b {
-    font-weight: bold;
+  font-weight: bold;
 }
+
 em,
 .italic,
 i {
-    font-style: italic;
+  font-style: italic;
 }
+
 del,
 .del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
+
 :focus {
-    outline: none;
+  outline: none;
 }
+
 img {
-    max-width: 100%;
-    width: auto;
-    height: auto;
+  max-width: 100%;
+  width: auto;
+  height: auto;
 }
+
 /* tools -------------------------- */
 .clear {
-    clear: both;
-    display: block;
-    line-height: 0;
-    height: 0;
-    font-size: 0;
+  clear: both;
+  display: block;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
 }
+
 .clearfix:after,
 .wrap:after,
 .spanning:after,
@@ -180,21 +202,24 @@ aside:after,
 section:after,
 article:after,
 .text:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-    font-size: 0;
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  font-size: 0;
 }
+
 .align-left {
-    float: left !important;
+  float: left !important;
 }
+
 .align-right {
-    float: right !important;
+  float: right !important;
 }
+
 .overflow-hidden {
-    overflow: hidden;
-    display: block;
+  overflow: hidden;
+  display: block;
 }
