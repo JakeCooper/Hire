@@ -358,22 +358,24 @@ header {
     margin-bottom: 38px; }
     header h1 span {
       font-weight: 200; }
-  header .autor {
+  header .author {
     padding: 12px 0 0;
     font-size: 14px;
     line-height: 24px;
     font-weight: bold;
     color: #ffffff; }
-    header .autor a {
+    header .author a {
       color: #ffffff; }
-      header .autor a:hover {
+      header .author a:hover {
         color: #ffffff;
         opacity: 0.8;
         filter: alpha(opacity=80); }
-      header .autor a:active {
+      header .author a:active {
         color: #ffffff;
         opacity: 1;
         filter: alpha(opacity=100); }
+    header .author span {
+      font-weight: normal; }
   header .buttons-wrapper {
     padding-top: 53px; }
     header .buttons-wrapper .button-stripe {

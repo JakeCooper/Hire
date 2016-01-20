@@ -15,7 +15,7 @@ header {
       font-weight: $f-extra-light;
     }
   }
-  .autor {
+  .author {
     padding: 12px 0 0;
     font-size: 14px;
     line-height: 24px;
@@ -31,6 +31,9 @@ header {
         color: $white;
         @include opacity(1);
       }
+    }
+    span {
+      font-weight: normal;
     }
   }
   .buttons-wrapper {
