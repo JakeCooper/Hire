@@ -628,6 +628,48 @@ footer {
         .social-list li a.social-google:active {
           background-color: #ac241e; }
 
+.team-title {
+  font: bold 48px/48px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px; }
+
+.team-subtitle {
+  font-size: 19px;
+  line-height: 25px;
+  color: #919191;
+  text-align: center; }
+
+.team-column {
+  padding: 0 30px 60px;
+  float: left;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 25%; }
+  .team-column img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 23px;
+    border-radius: 50%;
+    border: solid 4px #F5F5F5; }
+  .team-column h5 {
+    font: bold 18px/24px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 0; }
+  .team-column p {
+    color: #CCC;
+    margin-bottom: 12px; }
+
+.team {
+  padding: 108px 0 116px; }
+
+.team-wrapper {
+  padding-top: 50px;
+  margin: 0 -15px; }
+
 .discover {
   padding: 31px 0 25px;
   background: #fafafa; }
@@ -816,6 +858,10 @@ footer {
     padding: 0 60px 60px;
     width: 50%; }
 
+  .team-column {
+    padding: 0 60px 60px;
+    width: 50%; }
+
   .simple-content {
     float: none;
     width: auto;
@@ -857,6 +903,10 @@ footer {
     font-size: 36px;
     line-height: 46px; }
 
+  .team-title {
+    font-size: 36px;
+    line-height: 46px; }
+
   .discover-content {
     float: none;
     width: auto;
@@ -889,6 +939,14 @@ footer {
     margin-left: 0; }
 
   .promo-column {
+    padding: 0 15px 60px;
+    width: auto;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
+  .team-column {
     padding: 0 15px 60px;
     width: auto;
     max-width: 290px;

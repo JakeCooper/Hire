@@ -30,9 +30,13 @@
     }
   }
   .promo-column {
-     padding: 0 60px 60px;
-     width: 50%;
-   }
+    padding: 0 60px 60px;
+    width: 50%;
+  }
+  .team-column {
+    padding: 0 60px 60px;
+    width: 50%;
+  }
   .simple-content {
     float: none;
     width: auto;
@@ -83,6 +87,10 @@
     font-size: 36px;
     line-height: 46px;
   }
+  .team-title {
+    font-size: 36px;
+    line-height: 46px;
+  }
   .discover-content {
     float: none;
     width: auto;
@@ -128,12 +136,20 @@
   }
   .promo-column {
     padding: 0 15px 60px;
-     width: auto;
-     max-width: 290px;
-     margin-left: auto;
-     margin-right: auto;
-     float: none;
-   }
+    width: auto;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+  .team-column {
+    padding: 0 15px 60px;
+    width: auto;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
   .discover-content {
     h2 {
       font-size: 36px;

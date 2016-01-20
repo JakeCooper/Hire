@@ -261,6 +261,55 @@
   }
 }
 
+.team-title {
+  font: bold 48px/48px $fontCaption;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.team-subtitle {
+  font-size: 19px;
+  line-height: 25px;
+  color: #919191;
+  text-align: center;
+}
+
+.team-column {
+  padding: 0 30px 60px;
+  float: left;
+  text-align: center;
+  @include sizing;
+  width: 25%;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 23px;
+    border-radius: 50%;
+    border: solid 4px #F5F5F5;
+  }
+  h5 {
+    font: bold 18px/24px $fontCaption;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  p {
+    color: $light-gray;
+    margin-bottom: 12px;
+  }
+}
+
+.team {
+  padding: 108px 0 116px;
+}
+
+.team-wrapper {
+  padding-top: 50px;
+  margin: 0 -15px;
+}
+
+
 .discover {
   padding: 31px 0 25px;
   background: #fafafa;
