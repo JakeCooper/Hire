@@ -51,12 +51,16 @@
 }
 
 .promo-column {
-  padding: 0 15px 60px;
+  padding: 0 30px 60px;
   float: left;
+  text-align: center;
   @include sizing;
   width: 25%;
-  img {
+  img,i.fa {
+    color: $light-gray;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 23px;
   }
   h5 {
@@ -296,20 +300,12 @@
   margin: 0 10px 20px;
   position: relative;
   @include sizing;
-  &:after {
-    content: "";
+  .icon {
     position: absolute;
-    left: 23px;
-    top: 14px;
+    left: 17px;
+    top: 12px;
     width: 32px;
     height: 32px;
-    @extend %sprite;
-    background-position: -100px 0;
-  }
-  &.android {
-    &:after {
-      background-position: -150px 0;
-    }
   }
 }
 

@@ -30,17 +30,9 @@
     }
   }
   .promo-column {
-    width: auto;
-    max-width: 290px;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    text-align: center;
-    img {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
+     padding: 0 60px 60px;
+     width: 50%;
+   }
   .simple-content {
     float: none;
     width: auto;
@@ -134,12 +126,21 @@
       }
     }
   }
+  .promo-column {
+    padding: 0 15px 60px;
+     width: auto;
+     max-width: 290px;
+     margin-left: auto;
+     margin-right: auto;
+     float: none;
+   }
   .discover-content {
     h2 {
       font-size: 36px;
       line-height: 46px;
     }
   }
+
 }
 @media (min-width: 480px) {
   .mobile-visible {

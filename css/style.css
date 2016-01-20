@@ -199,12 +199,12 @@ article:after,
 
 /* common -------------------------- */
 .comments .tab-prev,
-.comments .tab-next, .button-download:after {
+.comments .tab-next {
   background: url(../images/sprite.png) 0 0 no-repeat; }
 
 html {
   height: 100%;
-  background: #ffffff; }
+  background: #fff; }
 
 body {
   height: 100%;
@@ -238,16 +238,16 @@ a {
     color: #0b97c3; }
 
 .error {
-  color: #ff0000 !important;
-  border-color: #ff0000 !important; }
+  color: #f00 !important;
+  border-color: #f00 !important; }
 
 .success {
-  color: #00cc00 !important;
-  border-color: #00cc00 !important; }
+  color: #0c0 !important;
+  border-color: #0c0 !important; }
 
 .disabled {
-  color: #999999 !important;
-  border-color: #999999 !important;
+  color: #999 !important;
+  border-color: #999 !important;
   cursor: default !important; }
 
 .input-text,
@@ -255,7 +255,7 @@ a {
   width: 100%;
   float: left;
   border: 2px solid #d8d8d8;
-  background: #ffffff;
+  background: #fff;
   height: 58px;
   padding: 10px 21px;
   font: 500 17px/34px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -278,7 +278,7 @@ a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 .button {
-  color: #ffffff;
+  color: #fff;
   background: #10bbf1;
   height: 58px;
   border: 2px solid #10bbf1;
@@ -306,18 +306,18 @@ a.button {
   text-decoration: none;
   display: inline-block;
   line-height: 54px;
-  color: #ffffff; }
+  color: #fff; }
   a.button:hover {
-    color: #ffffff; }
+    color: #fff; }
   a.button:active {
-    color: #ffffff; }
+    color: #fff; }
   a.button.button-stripe {
     background-color: rgba(0, 0, 0, 0.2);
-    border-color: #ffffff; }
+    border-color: #fff; }
     a.button.button-stripe:hover {
       color: #222222;
-      background-color: #ffffff;
-      border-color: #ffffff; }
+      background-color: #fff;
+      border-color: #fff; }
     a.button.button-stripe:active {
       color: #222222;
       background-color: #e5e5e5;
@@ -343,7 +343,7 @@ header {
   padding: 104px 0;
   background: url(../images/header.jpg) no-repeat 50% 50%;
   font: 24px/36px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #ffffff;
+  color: #fff;
   -moz-background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -363,15 +363,15 @@ header {
     font-size: 14px;
     line-height: 24px;
     font-weight: bold;
-    color: #ffffff; }
+    color: #fff; }
     header .author a {
-      color: #ffffff; }
+      color: #fff; }
       header .author a:hover {
-        color: #ffffff;
+        color: #fff;
         opacity: 0.8;
         filter: alpha(opacity=80); }
       header .author a:active {
-        color: #ffffff;
+        color: #fff;
         opacity: 1;
         filter: alpha(opacity=100); }
     header .author span {
@@ -391,7 +391,7 @@ header {
 /* footer -------------------------- */
 footer {
   background: #324a57;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
   line-height: 28px;
   padding: 90px 0;
@@ -448,14 +448,18 @@ footer {
   margin: 0 -15px; }
 
 .promo-column {
-  padding: 0 15px 60px;
+  padding: 0 30px 60px;
   float: left;
+  text-align: center;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 25%; }
-  .promo-column img {
+  .promo-column img, .promo-column i.fa {
+    color: #CCC;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 23px; }
   .promo-column h5 {
     font: bold 18px/24px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -499,7 +503,7 @@ footer {
 
 .comments {
   background: #10bbf1;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
   padding: 70px 0 60px; }
   .comments .box {
@@ -512,7 +516,7 @@ footer {
       margin-bottom: 37px; }
       .comments .box h4 a {
         font-weight: bold;
-        color: #ffffff; }
+        color: #fff; }
         .comments .box h4 a:hover {
           text-decoration: underline; }
     .comments .box p {
@@ -607,7 +611,7 @@ footer {
       -webkit-border-radius: 3px;
       border-radius: 3px;
       background-color: #3bcbff;
-      color: #ffffff;
+      color: #fff;
       text-align: center;
       -moz-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
       -ms-transition: color 0.1s linear, background-color 0.1s linear, border-color 0.1s linear;
@@ -666,16 +670,12 @@ footer {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  .button-download:after {
-    content: "";
+  .button-download .icon {
     position: absolute;
-    left: 23px;
-    top: 14px;
+    left: 17px;
+    top: 12px;
     width: 32px;
-    height: 32px;
-    background-position: -100px 0; }
-  .button-download.android:after {
-    background-position: -150px 0; }
+    height: 32px; }
 
 .button-download-title {
   padding: 11px 0 1px;
@@ -820,15 +820,8 @@ footer {
       margin-bottom: 20px; }
 
   .promo-column {
-    width: auto;
-    max-width: 290px;
-    margin-left: auto;
-    margin-right: auto;
-    float: none;
-    text-align: center; }
-    .promo-column img {
-      margin-left: auto;
-      margin-right: auto; }
+    padding: 0 60px 60px;
+    width: 50%; }
 
   .simple-content {
     float: none;
@@ -902,6 +895,14 @@ footer {
   header .buttons-wrapper .button.button-stripe {
     margin-left: 0; }
 
+  .promo-column {
+    padding: 0 15px 60px;
+    width: auto;
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none; }
+
   .discover-content h2 {
     font-size: 36px;
     line-height: 46px; } }
@@ -910,7 +911,7 @@ footer {
     display: none; } }
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .comments .tab-prev,
-  .comments .tab-next, .button-download:after,
+  .comments .tab-next,
   .comments .tab-prev,
   .comments .tab-next,
   .button-download:after {
