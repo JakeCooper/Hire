@@ -11,7 +11,8 @@
     font-size: 16px;
     line-height: 28px;
     max-width: 556px;
-    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto 24px auto;
     clear: both;
   }
 }
@@ -20,7 +21,7 @@
   font: bold 48px/60px $fontCaption;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 38px;
+  margin-bottom: 24px;
 }
 
 .newsletter-form {

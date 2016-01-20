@@ -409,14 +409,15 @@ footer {
     font-size: 16px;
     line-height: 28px;
     max-width: 556px;
-    margin: 0 auto;
+    text-align: center;
+    margin: 0 auto 24px auto;
     clear: both; }
 
 .newsletter-title {
   font: bold 48px/60px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 38px; }
+  margin-bottom: 24px; }
 
 .newsletter-form {
   position: relative;
