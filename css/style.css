@@ -730,7 +730,9 @@ footer {
   float: left;
   width: 50%; }
   .discover-img img {
-    display: block; }
+    display: block;
+    padding: 80px 20px;
+    max-width: 90%; }
 
 .discover-img-inside {
   margin: 0 -40px; }
