@@ -291,12 +291,15 @@ a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
-  .button:hover {
+  .button:hover:enabled {
     background: #009a54;
     border-color: #009a54; }
-  .button:active {
+  .button:active:enabled {
     background: #00341c;
     border-color: #00341c; }
+  .button:disabled {
+    opacity: 0.5;
+  }
 
 a.button {
   text-decoration: none;
