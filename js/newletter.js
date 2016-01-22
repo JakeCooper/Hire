@@ -4,16 +4,21 @@ $(function() {
         return re.test(email);
     }
 
-    $('.modal-button').click(function() {
+    var $newsletter = $(".newsletter-form");
+    var $newsletterInput = $newsletter.find(".input-text");
+    $('.submit-newsletter').click(function() {
         if (validateEmail($newsletter.find(".input-text").val())) {
-            $("#myModal").modal();
+            $newsletter.fadeOut("slow", function() {
+                $newsletter.replaceWith('<p class="submit-success">Thank you for signing up!</p>');
+            });
         } else {
             $newsletter.find(".input-text").css({border:"2px solid red"});
-            $newsletter.find(".button").prop("disabled","true")
+            $newsletter.find(".button").prop("disabled","true");
+            $(".newsletter-form").find(".input-text").prop("placeholder","Woops, you forgot to enter an email!")
         }
     });
 
-    var $newsletter = $(".newsletter-form");
+
     $newsletter.keyup(function() {
         if (validateEmail($newsletter.find(".input-text").val())) {
             $newsletter.find(".input-text").css({border:"2px solid #d8d8d8"});
