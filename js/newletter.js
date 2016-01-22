@@ -5,7 +5,6 @@ $(function() {
     }
 
     var $newsletter = $(".newsletter-form");
-    var $newsletterInput = $newsletter.find(".input-text");
     $('.submit-newsletter').click(function() {
         if (validateEmail($newsletter.find(".input-text").val())) {
             $newsletter.fadeOut("slow", function() {
