@@ -387,3 +387,29 @@
 .discover-img-inside {
   margin: 0 -40px;
 }
+
+footer {
+  section{
+    text-align: left;
+  }
+  .logo {
+    text-align: center;
+    img {
+      margin: auto 0;
+      max-width: 40%;
+    }
+  }
+  .made-with {
+    text-align: center;
+    color: $light-gray;
+  }
+  a {
+    color: #FFF;
+    &:hover {
+      color: #CCC;
+    }
+  }
+  h4 {
+    font-weight: bold;
+  }
+}
