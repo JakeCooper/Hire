@@ -75,7 +75,6 @@
 \begin{document}
 
 \raggedright
-\doublespacing
 
 \pagenumbering{gobble}
 
@@ -112,7 +111,9 @@
     
     \phantomsection
     \listoffigures
-    \newpage
+    \phantomsection
+    \listoftables
+%    \newpage
     
     \printglossaries
     \newpage
@@ -125,7 +126,16 @@
 \addcontentsline{toc}{section}{Executive Summary}
 \noindent  
 
-% TODO: BEN - Abstract
+Good Morning is an app backed by \textit{SoftStart}. The app will help users wake up in the morning using a personal assistant, machine learning and smart integrations. Despite a number of other apps in this domain we believe that \textbf{Good Morning} will provide users with a wake up experience currently not available in other applications. The objectives for \textbf{Good Morning} are,
+
+\begin{description}
+  \item[An Alarm] Core alarm functionality or similar to wake the user up gracefully.
+  \item[Smart Assistant] A personal assistant to help take you from waking up, through your morning routine and out the door.
+  \item[Machine Learning] Support for learning the users morning routine and assisting them in adjusting their schedule and wake up time accordingly.
+  \item[Smart Integration] Connection to smart devices around the house (e.g. a \gls{philipsHue}) to help the user throughout their morning routine.
+\end{description}
+
+
 
 \end{abstract}
 \newpage
@@ -266,26 +276,27 @@ personal organization tool.
 % ---------------------------------------
 \section{Project Schedule}\label{project-schedule}
 
-% TODO: BEN - Project Schedule
+The requirements for \textbf{Good Morning} will be developed according to a rapid iteration schedule with the final prototype being completed on March 31st, 2016. The full project schedule is show in table \ref{tab:schedule}.
 
-%\begin{longtable}[c]{@{}ll@{}}
-%\toprule
-%\textbf{Project Milestone} & \textbf{Date}\tabularnewline
-%\midrule
-%\endhead
-%\textbf{Draft Requirements Definition } & 21 Jan\tabularnewline
-%\textbf{Promotional Website Live } & 21 Jan\tabularnewline
-%\textbf{Formal Requirements Definition (Revision) } & 16
-%Feb\tabularnewline
-%\textbf{Detailed Requirements Definition (Revision) } & 1
-%Mar\tabularnewline
-%\textbf{Preliminary Prototype Demo } & 3 Mar\tabularnewline
-%\textbf{Final Requirements Definition (Revision) } & 15
-%Mar\tabularnewline
-%\textbf{User Manual } & 22 Mar\tabularnewline
-%\textbf{Final Prototype Demo } & 31 Mar\tabularnewline
-%\hrule
-%\end{longtable}
+\begin{table}[htb]
+    \caption{\textbf{Good Morning} Project Schedule}\label{tab:schedule}
+    \centering
+    \begin{tabular}{|lr|}
+        \hline
+        \textbf{Project Milestone} & \textbf{Date} \\
+        \hline
+        Draft Requirements Definition & 21 Jan \\
+        Promotional Website Live & 21 Jan \\
+        Formal Requirements Definition (Revision) & 16 Feb \\
+        Detailed Requirements Definition (Revision) & 1 Mar \\
+        Preliminary Prototype Demo & 3 Mar \\
+        Final Requirements Definition (Revision) & 15 Mar \\
+        User Manual & 22 Mar \\
+        Final Prototype Demo & 31 Mar \\
+        \hline
+    \end{tabular}
+\end{table}
+
 
 
 %
