@@ -19,8 +19,8 @@
 
 % Font
 
-\usepackage[default]{droidsans}
-\usepackage[T1]{fontenc}
+%\usepackage[default]{opensans}
+%\usepackage[T1]{fontenc}
 
 % Title and Heading Styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,6 +63,7 @@
 }
 
 \newacronym{api}{API}{Application Programming Interface}
+\newacronym{iot}{IOT}{Internet of Things}
 
 \makeglossaries
 
@@ -179,9 +180,9 @@ A significant constraint for \textbf{Good Morning} will be internationalization.
 % ---------------------------------------
 \section{Problem Description}\label{problem-description}
 
+Our market research shows that over 80\% of our users find the morning to be the most difficult portion of their day \cite{marketResearch}. With such a overwhelming majority of the population having trouble in the morning it is obvious there needs to be a smarter and more intuitive to get yourself up in the morning.
 
-
-% TODO: ANDREI - Problem Definition
+This is the market that we hope to tap with our application. By making an application that boasts a easy way to get up and access your information in the morning we will be able to easily aquire and process information on this important portion of our users day and use this to help others to wake up faster and easier.
 
 %
 % PROJECT OBJECTIVES
@@ -228,14 +229,38 @@ By utilizing the Good Morning application, this demographic of users will be abl
 % ---------------------------------------
 \section{Known Interactions}\label{known-interactions}
 
+One of the most important portions of this application will be how it interacts with the world around our users. For this reason we expect the implementation to have a easily extensible \gls{api} so that it can be used with \gls{iot} devices (listed below).
+
 \begin{itemize}
 \item
-  Smart devices, e.g. \gls{philipsHue}
+  \gls{philipsHue}
 \item
-  Mobile Operating System and \glspl{api}, i.e., Android or iOS
+  Pepple Smart Watch
+\item
+  Apple Watch
 \end{itemize}
 
-% TODO: ANDREI - Known Interactions
+We also expect the application to be written so we can have multiple front ends.
+\begin{itemize}
+\item
+  iOS
+\item
+  Android
+\item
+  Responsive Web Based interface (HTML, Javascript, CSS)
+\end{itemize}
+
+There will also have to be extensive communication with a server for machine learning applications. This will require data to be collected throughout the application and for that data to be sent to the server from many sources including.
+
+\begin{itemize}
+\item
+  Calendars (Google, Outlook, Apple)
+\item
+  Email (Gmail, Outlook, Yahoo)
+\item
+  Weather (theWeatherNetwork)
+\end{itemize}
+
 
 %
 % Known Contraints
