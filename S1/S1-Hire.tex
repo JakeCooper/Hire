@@ -1,0 +1,259 @@
+\documentclass[11pt]{article}
+
+\usepackage{hyperref}
+\usepackage[letterpaper, top=1in, bottom=1in, left=1.5in, right=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+\usepackage[titletoc,title]{appendix}
+\usepackage[nottoc,notbib]{tocbibind}
+\usepackage{lipsum}
+\usepackage[toc]{glossaries}
+\usepackage{verbatim}
+\usepackage{subcaption}
+\usepackage{bookmark}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Font
+
+\usepackage[default]{droidsans}
+\usepackage[T1]{fontenc}
+
+% Title and Heading Styling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{heading-color}{HTML}{046938}
+\definecolor{subheading-color}{HTML}{333333}
+\definecolor{subsubheading-color}{HTML}{666666}
+
+\titleformat{\section}
+  {\normalfont\sffamily\fontsize{16pt}{16}\bfseries\color{heading-color}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\sffamily\fontsize{14pt}{14}\bfseries\color{subheading-color}}
+  {\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+  {\normalfont\sffamily\fontsize{14pt}{14}\bfseries\color{subsubheading-color}}
+  {\thesubsubsection}{1em}{}
+
+% Section Tweaks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\abstractname}{Executive Summary}
+
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\bookmarksetup{open,numbered}
+
+
+%   Glossary
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newglossaryentry{philipsHue}
+{
+  name=Philips Hue Light Bulb,
+  description={A ``smart'' light bulb that connects
+  to home Wi-Fi networks, \url{http://meethue.com/}}
+}
+
+\newacronym{api}{API}{Application Programming Interface}
+\newacronym{iot}{IOT}{Internet of Things}
+
+\makeglossaries
+
+
+%   _____                _     __  __       _   _            
+%  |  ___| __ ___  _ __ | |_  |  \/  | __ _| |_| |_ ___ _ __ 
+%  | |_ | '__/ _ \| '_ \| __| | |\/| |/ _` | __| __/ _ \ '__|
+%  |  _|| | | (_) | | | | |_  | |  | | (_| | |_| ||  __/ |   
+%  |_|  |_|  \___/|_| |_|\__| |_|  |_|\__,_|\__|\__\___|_|   
+%
+
+
+
+\begin{document}
+
+\raggedright
+
+\pagenumbering{gobble}
+
+%   Letter of Transmittal
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    %\pdfbookmark[section]{Letter of Transmittal}{lot}
+    %\includepdf{../"Letter of Transmittal"/"Letter of Transmittal".pdf}
+   
+
+%   Cover Page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    \pdfbookmark[section]{Cover Page}{cover}
+    \includepdf{Pages/CoverPage.pdf}
+
+
+%   Table of Contents and Figures 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \setcounter{page}{1}
+    \pagenumbering{roman}
+    
+
+\setlength{\parskip}{1mm}   
+    
+    \pdfbookmark[section]{\contentsname}{toc}
+    \tableofcontents
+    \newpage
+    
+
+\setlength{\parskip}{2mm}   
+    
+    
+%    \phantomsection
+%    \listoffigures
+    \phantomsection
+    \listoftables
+%    \newpage
+    
+    \printglossaries
+    \newpage
+        
+%   Summary 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+\begin{abstract}
+\phantomsection
+\addcontentsline{toc}{section}{Executive Summary}
+\noindent  
+
+Dat Abstract.
+
+\end{abstract}
+\newpage
+
+%   ____            _       
+%  | __ )  ___   __| |_   _ 
+%  |  _ \ / _ \ / _` | | | |
+%  | |_) | (_) | (_| | |_| |
+%  |____/ \___/ \__,_|\__, |
+%                     |___/ 
+    
+    
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\glsresetall
+\renewcommand{\arraystretch}{1.5} % Fix the table sizes
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+        
+%
+% INTRODUCTION
+% ---------------------------------------
+\section{Introduction}\label{introduction}
+
+% S1 must address the client RFP2 (C0)
+% ├── This should explain what you are going to do for your project as
+% │   opposed to how you will accomplish it.
+% ├── When writing this, do not assume that your customer has any deep
+% │   knowledge of computer science.
+% └── Cost estimation is not required.
+
+
+%
+% FUNCTIONAL SPECIFICATIONS
+% ---------------------------------------
+\section{Functional Specifications}\label{functional-specs}
+
+% Functional specifications
+% ├── The functional specification should include a title page having
+% │   the title of your project; the name of your group or company
+% │   (which you can invent); the people who contributed to the
+% │   document, including authors of individual sections and editor of
+% │   the whole paper (e.g., outside consultants); and the date.
+% ├── In about two pages you should summarize the project you are
+% │   working on.
+% ├── Give your system a name and describe what it does and who will use
+% │   it.
+% ├── What needs and objectives will the project satisfy?
+% ├── How will it help the users?
+% ├── Outline the most important features of your system.
+% └── Describe the hardware your system will use, and any important
+%     performance goals that it should satisfy (e.g., time or space
+%     efficiency, security, or reliability).
+ 
+
+%
+% USER INTERACTION
+% ---------------------------------------
+\section{User Interaction}\label{user-interaction}
+% ├── The next section of about seven or eight pages concerns the user
+% │   interaction and will form the basis of your user manual to be
+% │   delivered towards the end of the course.
+% ├── It should describe the function that the system will perform from
+% │   the point of view of the user. Cover the kinds of inputs your
+% │   system expects, the actions it will take on both expected and
+% │   unexpected input data; the types of outputs the user will see in
+% │   those cases. Marks will be deducted for a poor user interface
+% │   regardless of the opinion of the customers.
+% ├── Include several sample transcripts of the interaction with your
+% │   system in the form of a dialogue.
+% ├── Include a glossary of all specialized terms used in the document,
+% │   either computer science terms that the programmer may not know, or
+% │   terms from the field in which you are working.
+% └── Context and situation awareness.
+
+%
+% Management Plan
+% ---------------------------------------
+\section{Management Plan}\label{management-plan}
+% ├── The management plan of about five pages should include a breakdown
+% │   of the different features of the project, the major classes of
+% │   functions and the relationship between them.
+% ├── It should also include a page or so discussing possible
+% │   implementations.
+% ├── Make sure that you do not give the impression that you are
+% │   promising more than you intend to deliver.
+% ├── Cover yourself by including a page on a minimal system that you
+% │   think you can complete by the end of term, and the enhancements
+% │   you could include if all goes well.
+% └── Finish with a summary restating the main points you want the
+%     customer to remember, then include a page on the structure of your
+%     team and who will be responsible for which parts of the project.
+
+
+
+
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+%    \pagebreak
+    \section{References} 
+    
+    \bibliographystyle{IEEEtran}
+
+    \bibliography{references}
+    
+    \pagebreak
+%   ____             _      __  __       _   _            
+%  | __ )  __ _  ___| | __ |  \/  | __ _| |_| |_ ___ _ __ 
+%  |  _ \ / _` |/ __| |/ / | |\/| |/ _` | __| __/ _ \ '__|
+%  | |_) | (_| | (__|   <  | |  | | (_| | |_| ||  __/ |   
+%  |____/ \__,_|\___|_|\_\ |_|  |_|\__,_|\__|\__\___|_|   
+%  
+
+% Appendices
+
+%\pdfbookmark[part]{Appendices}{appx}
+%\begin{appendices}
+%
+%\section{Tool Screen Captures}\label{appx:screens}
+%
+%
+%\end{appendices}
+
+\end{document}
