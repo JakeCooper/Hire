@@ -19,8 +19,8 @@
 
 % Font
 
-\usepackage[default]{droidsans}
-\usepackage[T1]{fontenc}
+%\usepackage[default]{droidsans}
+%\usepackage[T1]{fontenc}
 
 % Title and Heading Styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -196,6 +196,20 @@ Dat Abstract.
 \subsection{Market Position}
 
 % TODO: Market Position (Andrei)
+Our research has shown there are many competing applications in this market including AirTasker \cite{AirTasker}, Task Rabbit \cite{TaskRabbit}, and ThumbTack \cite{ThumbTack}. 
+Because of this pre-existing competition, we are putting a large amount of effort into finding where our application will be competitve against the current solutions. 
+Our application will focus on the two areas that we feel need the most improvement; monetization and task screening.
+
+The first area is monetization, many of the currently competing applications take 10\% of each sale. 
+We feel 10\% is much too large of a chunk of the transaction and will lower this just 5\% of the transaction. 
+This will help us to break into the market quickly as the people working for other task apps will see immediate increases in their profits when they are hired using our applicaition
+
+We will also focus on making the payment process as simple and straight forward as possible. 
+There will be no cash involved during the Hire process and all money that is exchanged will be handled securely through our application.
+
+The second area is the lack of proper screening of job requests. 
+The mis-classification of job requests is often stated as the largest downfall of task based hiring applications \cite{ThumbTack_sucks}. 
+Our team will focus on classifying incoming requests into the appropriate category so our clients and our users will know exactly what is requested before a Hire is made.
 
 \subsection{Technical Requirements}
 
@@ -262,6 +276,12 @@ Dat Abstract.
 \subsection{Implementation}
 
 % TODO: Implementation (Andrei)
+Our technology stack will be organized into a client server model. 
+Connections will be initiated through a frontend (either Android or IOS) and requests will be handled by a server written in Scala \cite{scala}. 
+
+This server will be securely hosted by Digital Ocean and will be implemented with horizontal scaling as a top priority. This means that instead of moving our server to a more powerful machine as we get more traffic, we will simply add more machines and split the load between them.
+
+The final piece will be handling monetary transactions, which will be completed using thethe PayPal REST API \cite{paypal}. Using a mature service like PayPal will ensure that monetary transactions are fast secure and simple.
 
 %
 % SUMMARY
