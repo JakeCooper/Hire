@@ -19,8 +19,8 @@
 
 % Font
 
-\usepackage[default]{droidsans}
-\usepackage[T1]{fontenc}
+%\usepackage[default]{droidsans}
+%\usepackage[T1]{fontenc}
 
 % Title and Heading Styling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,8 +61,65 @@
   description={A ``smart'' light bulb that connects
   to home Wi-Fi networks, \url{http://meethue.com/}}
 }
+\newglossaryentry{client}
+{
+  name=client,
+  description={A system consuming files, such as webpages, over the internet}
+}
+\newglossaryentry{server}
+{
+  name=server,
+  description={A computer serving files, such as webpages, over the internet}
+}
+\newglossaryentry{hscaling}
+{
+  name=horizontal scaling,
+  description={A strategy for allowing a platform to handle more traffic by adding more servers rather than increasing the through put of individual servers}
+}
+\newglossaryentry{frontend}
+{
+  name=front-end,
+  description={The portion of the application that the user interacts directly with, e.g., a website or mobile app's interface}
+}
+\newglossaryentry{scala}
+{
+  name=Scala,
+  description={A general purpose programming language built on the \gls{java} virtual machine. It has recently gained popularity for it's practicality and scalability}
+}
+\newglossaryentry{digitalocean}
+{
+  name=Digital Ocean,
+  description={A reliable cloud based \gls{server} provider, \url{https://www.digitalocean.com/}}
+}
+\newglossaryentry{paypal}
+{
+  name=PayPal,
+  description={The largest online payment system provider, \url{https://www.paypal.com}}
+}
+\newglossaryentry{java}
+{
+  name=Java,
+  description={A general purpose programming language built by Oracle. One of the most popular programming languages in the world}
+}
+\newglossaryentry{rest}
+{
+  name=\gls{restAbbr},
+  description={The software architectural style used for the world wide web, more simply how platforms present data to be consumed on the internet}
+}
+\newglossaryentry{android}
+{
+  name=Android,
+  description={The open source mobile operating system created by Google for smartphones}
+}
+\newglossaryentry{ios}
+{
+  name=\gls{iosAbbr},
+  description={The mobile operating system created by Apple for the iPhone and iPad product lines}
+}
 
 \newacronym{api}{API}{Application Programming Interface}
+\newacronym{restAbbr}{REST}{Representational State Transfer}
+\newacronym{iosAbbr}{iOS}{iPhone Operating System}
 \newacronym{iot}{IOT}{Internet of Things}
 
 \makeglossaries
@@ -118,7 +175,7 @@
     \listoffigures
     \phantomsection
     \listoftables
-%    \newpage
+    \newpage
     
     \printglossaries
     \newpage
@@ -164,7 +221,7 @@ Here at \textit{SoftStart} we strive to make the best software in the world. We'
 % │   knowledge of computer science.
 % └── Cost estimation is not required.
 
-This report details \textit{SoftStart's} preliminary draft of the functional specification, user interaction plan and management plan for Hire. Section \ref{functional-spec} discusses the functional specification for Hire including the current market state, our objective for Hire, and the technical requirements we foresee. Section \ref{user-interaction} details the plan for engaging users and building a world class user experience. Finally, section \ref{management-plan} show the management plan for the design, development and deployment of Hire.
+This report details \textit{SoftStart's} preliminary draft of the functional specification, user interaction plan and management plan for Hire. Section \ref{functional-spec} discusses the functional specification for Hire including the current market state, our objective for Hire, and the technical requirements we foresee. Section \ref{user-interaction} details the plan for engaging users and building a world class user experience. Finally, section \ref{management-plan} outlines the management plan for the design, development and deployment of Hire.
 
 %
 % FUNCTIONAL SPECIFICATIONS
@@ -189,6 +246,7 @@ This report details \textit{SoftStart's} preliminary draft of the functional spe
 %     efficiency, security, or reliability).
 
 % TODO: Functional Spec Introduction (Andrei)
+This section will describe in detail Hire's intended capabilities, appearance, and interactions with users. Section \ref{Objectives} will cover the intended functionality and what services the application will provide to its users. Section \ref{Market Position} will outline how we intend to differentiate ourselves from the competing applications in the hiring field. Lastly, section \ref{Technical Requirements} will give insight into the hardware we are building for and the expected performance of the application.
 
 \subsection{Objectives}
 
@@ -197,7 +255,7 @@ This report details \textit{SoftStart's} preliminary draft of the functional spe
 \subsection{Market Position}
 
 Our research has shown there are many competing applications in this market including AirTasker \cite{AirTasker}, Task Rabbit \cite{TaskRabbit}, and ThumbTack \cite{ThumbTack}. 
-Because of this pre-existing competition, we are putting a large amount of effort into finding where our application will be competitive against the current solutions. 
+Because of this pre-existing competition, we are putting a large amount of effort into finding the areas our application will be competitive against the current solutions. 
 Our application will focus on the two areas that we feel need the most improvement; monetization and task screening.
 
 The first area is monetization, many of the currently competing applications take 10\% of each sale. 
@@ -353,12 +411,11 @@ A couple weeks later, once Andy has been hired by a few different hirers, he get
 
 \subsection{Implementation}
 
-Our technology stack will be organized into a client server model. 
-Connections will be initiated through a frontend (either Android or IOS) and requests will be handled by a server written in Scala \cite{scala}. 
+Our technology stack will be organized into a \gls{client} \gls{server} model. Connections will be initiated through a \gls{frontend} (either \gls{android} or \gls{ios}) and requests will be handled by a \gls{server} written in \gls{scala} \cite{scala}. 
 
-This server will be securely hosted by Digital Ocean and will be implemented with horizontal scaling as a top priority. This means that instead of moving our server to a more powerful machine as we get more traffic, we will simply add more machines and split the load between them.
+This \gls{server} will be securely hosted by \gls{digitalocean} and will be implemented with \gls{hscaling} as a top priority. This means that instead of moving our \gls{server} to a more powerful machine as we get more traffic, we will simply add more \glspl{server} and split the load between them.
 
-The final piece will be handling monetary transactions, which will be completed using thethe PayPal REST API \cite{paypal}. Using a mature service like PayPal will ensure that monetary transactions are fast secure and simple.
+The final piece will be handling monetary transactions, which will be completed using the \gls{paypal} \gls{rest} \gls{api} \cite{paypal}. Using a mature service like \gls{paypal} will ensure that monetary transactions are fast secure and simple.
 
 %
 % SUMMARY
