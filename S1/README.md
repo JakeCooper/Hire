@@ -6,8 +6,8 @@ Keep track of what you've done and make notes on what's happening plz.
 
 #### Ben
 
-* [ ] Introduction
-* [ ] Environments
+* [x] Introduction
+* [x] Environments
 * [ ] Scenarios
 
 #### Andrei
