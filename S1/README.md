@@ -8,7 +8,7 @@ Keep track of what you've done and make notes on what's happening plz.
 
 * [x] Introduction
 * [x] Environments
-* [ ] Scenarios
+* [X] Scenarios
 
 #### Andrei
 
@@ -24,7 +24,7 @@ Keep track of what you've done and make notes on what's happening plz.
 
 #### Jake
 
-* [ ] Technical Requirements
+* [x] Technical Requirements
 * [ ] Features
 * [ ] Architecture
 
