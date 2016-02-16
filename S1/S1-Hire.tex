@@ -61,8 +61,65 @@
   description={A ``smart'' light bulb that connects
   to home Wi-Fi networks, \url{http://meethue.com/}}
 }
+\newglossaryentry{client}
+{
+  name=client,
+  description={A system consuming files, such as webpages, over the internet}
+}
+\newglossaryentry{server}
+{
+  name=server,
+  description={A computer serving files, such as webpages, over the internet}
+}
+\newglossaryentry{hscaling}
+{
+  name=horizontal scaling,
+  description={A strategy for allowing a platform to handle more traffic by adding more servers rather than increasing the through put of individual servers}
+}
+\newglossaryentry{frontend}
+{
+  name=front-end,
+  description={The portion of the application that the user interacts directly with, e.g., a website or mobile app's interface}
+}
+\newglossaryentry{scala}
+{
+  name=Scala,
+  description={A general purpose programming language built on the \gls{java} virtual machine. It has recently gained popularity for it's practicality and scalability}
+}
+\newglossaryentry{digitalocean}
+{
+  name=Digital Ocean,
+  description={A reliable cloud based \gls{server} provider, \url{https://www.digitalocean.com/}}
+}
+\newglossaryentry{paypal}
+{
+  name=PayPal,
+  description={The largest online payment system provider, \url{https://www.paypal.com}}
+}
+\newglossaryentry{java}
+{
+  name=Java,
+  description={A general purpose programming language built by Oracle. One of the most popular programming languages in the world}
+}
+\newglossaryentry{rest}
+{
+  name=\gls{restAbbr},
+  description={The software architectural style used for the world wide web, more simply how platforms present data to be consumed on the internet}
+}
+\newglossaryentry{android}
+{
+  name=Android,
+  description={The open source mobile operating system created by Google for smartphones}
+}
+\newglossaryentry{ios}
+{
+  name=\gls{iosAbbr},
+  description={The mobile operating system created by Apple for the iPhone and iPad product lines}
+}
 
 \newacronym{api}{API}{Application Programming Interface}
+\newacronym{restAbbr}{REST}{Representational State Transfer}
+\newacronym{iosAbbr}{iOS}{iPhone Operating System}
 \newacronym{iot}{IOT}{Internet of Things}
 
 \makeglossaries
@@ -335,8 +392,7 @@ Joe shows up a half hour later and gets started cleaning out the drain while Sar
 
 \subsection{Implementation}
 
-Our technology stack will be organized into a client server model. 
-Connections will be initiated through a front-end (either Android or IOS) and requests will be handled by a server written in Scala \cite{scala}. 
+Our technology stack will be organized into a client server model. Connections will be initiated through a front-end (either Android or iOS) and requests will be handled by a server written in Scala \cite{scala}. 
 
 This server will be securely hosted by Digital Ocean and will be implemented with horizontal scaling as a top priority. This means that instead of moving our server to a more powerful machine as we get more traffic, we will simply add more machines and split the load between them.
 
