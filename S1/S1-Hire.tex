@@ -175,7 +175,7 @@
     \listoffigures
     \phantomsection
     \listoftables
-%    \newpage
+    \newpage
     
     \printglossaries
     \newpage
@@ -392,11 +392,11 @@ Joe shows up a half hour later and gets started cleaning out the drain while Sar
 
 \subsection{Implementation}
 
-Our technology stack will be organized into a client server model. Connections will be initiated through a front-end (either Android or iOS) and requests will be handled by a server written in Scala \cite{scala}. 
+Our technology stack will be organized into a \gls{client} \gls{server} model. Connections will be initiated through a \gls{frontend} (either \gls{android} or \gls{ios}) and requests will be handled by a \gls{server} written in \gls{scala} \cite{scala}. 
 
-This server will be securely hosted by Digital Ocean and will be implemented with horizontal scaling as a top priority. This means that instead of moving our server to a more powerful machine as we get more traffic, we will simply add more machines and split the load between them.
+This \gls{server} will be securely hosted by \gls{digitalocean} and will be implemented with \gls{hscaling} as a top priority. This means that instead of moving our \gls{server} to a more powerful machine as we get more traffic, we will simply add more \glspl{server} and split the load between them.
 
-The final piece will be handling monetary transactions, which will be completed using the PayPal REST API \cite{paypal}. Using a mature service like PayPal will ensure that monetary transactions are fast secure and simple.
+The final piece will be handling monetary transactions, which will be completed using the \gls{paypal} \gls{rest} \gls{api} \cite{paypal}. Using a mature service like \gls{paypal} will ensure that monetary transactions are fast secure and simple.
 
 %
 % SUMMARY
