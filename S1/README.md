@@ -26,7 +26,7 @@ Keep track of what you've done and make notes on what's happening plz.
 
 * [ ] Technical Requirements
 * [ ] Features
-* [ ] Architecture
+* [x] Architecture
 
 ## Bonus
 
