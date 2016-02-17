@@ -48,7 +48,7 @@
 \usepackage{etoolbox}
 \patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
 
-\bookmarksetup{open,numbered}
+\bookmarksetup{open, numbered}
 
 
 %   Glossary
@@ -61,8 +61,101 @@
   description={A ``smart'' light bulb that connects
   to home Wi-Fi networks, \url{http://meethue.com/}}
 }
+\newglossaryentry{client}
+{
+  name=client,
+  description={A system consuming files, such as webpages, over the internet}
+}
+\newglossaryentry{server}
+{
+  name=server,
+  description={A computer serving files, such as webpages, over the internet}
+}
+\newglossaryentry{hscaling}
+{
+  name=Horizontal scaling,
+  description={A strategy for allowing a platform to handle more traffic by adding more servers}
+}
+\newglossaryentry{frontend}
+{
+  name=Front end,
+  description={The portion of the application that the user interacts directly with, e.g., a website or mobile app's interface}
+}
+\newglossaryentry{backend}
+{
+  name=Back end,
+  description={Logic of an application that is run on a server}
+}
+\newglossaryentry{scala}
+{
+  name=Scala,
+  description={A general purpose programming language built on the \gls{java} virtual machine. It has recently gained popularity for it's practicality and scalability}
+}
+\newglossaryentry{digitalocean}
+{
+  name=Digital Ocean,
+  description={A reliable cloud based \gls{server} provider, \url{https://www.digitalocean.com/}}
+}
+\newglossaryentry{paypal}
+{
+  name=PayPal,
+  description={The largest online payment system provider, \url{https://www.paypal.com}}
+}
+\newglossaryentry{java}
+{
+  name=Java,
+  description={A general purpose programming language built by Oracle. One of the most popular programming languages in the world}
+}
+\newglossaryentry{rest}
+{
+  name=\gls{restAbbr},
+  description={The software architectural style used for the world wide web, more simply how platforms present data to be consumed on the internet}
+}
+\newglossaryentry{android}
+{
+  name=Android,
+  description={The open source mobile operating system created by Google for smartphones}
+}
+\newglossaryentry{ios}
+{
+  name=\gls{iosAbbr},
+  description={The mobile operating system created by Apple for the iPhone and iPad product lines}
+}
+\newglossaryentry{database}
+{
+  name=Database,
+  description={An organized collection of data that can be easily altered and accessed}
+}
+\newglossaryentry{typed-lang}
+{
+  name=strongly typed language,
+  description={A programming language is more likely to generate an error if the argument passed to a function does not closely match the expected type}
+}
+
+\newglossaryentry{non-relational}
+{
+  name=non-relational,
+  description={A digital database whose organization is not tied to a particular data model}
+}
+\newglossaryentry{relational}
+{
+  name=relational,
+  description={A digital database whose organization is based on the relational model of data}
+}
+\newglossaryentry{scalable}
+{
+  name=scalable,
+  description={A scalable system is one where performance does not suffer as the userbase grows}
+}
+\newglossaryentry{responsive}
+{
+  name=responsive,
+  description={A responsive website is one that works equally well on mobile as it does on standard desktop web platforms}
+}
 
 \newacronym{api}{API}{Application Programming Interface}
+\newacronym{restAbbr}{REST}{Representational State Transfer}
+\newacronym{iosAbbr}{iOS}{iPhone Operating System}
 \newacronym{iot}{IOT}{Internet of Things}
 
 \makeglossaries
@@ -118,7 +211,7 @@
     \listoffigures
     \phantomsection
     \listoftables
-%    \newpage
+    \newpage
     
     \printglossaries
     \newpage
@@ -131,7 +224,15 @@
 \addcontentsline{toc}{section}{Executive Summary}
 \noindent  
 
-Here at \textit{SoftStart} we strive to make the best software in the world. We're looking forward to 
+Here at \textit{SoftStart} we strive to make the best software in the world. We're looking forward to bringing the Hire platform into reality. This report details a preliminary plan for how Hire can be designed, developed and deployed. The three main section of the report are,
+ 
+\begin{description}
+    \item[Functional Specification] How the core platform will be planned and how the requirements will be developed.
+    \item[User Interactions] How users, both hires and hirees, will interact with the Hire platform.
+    \item[Management Plan] How the project will be organized and managed as we go from requirements to deployment.
+\end{description}
+
+This report should provide a clear picture of the direction of the requirements for the Hire platform going forward. \textit{SoftStart} is excited to make Hire a reality.
 
 
 \end{abstract}
@@ -164,7 +265,7 @@ Here at \textit{SoftStart} we strive to make the best software in the world. We'
 % │   knowledge of computer science.
 % └── Cost estimation is not required.
 
-This report details \textit{SoftStart's} preliminary draft of the functional specification, user interaction plan and management plan for Hire. Section \ref{functional-spec} discusses the functional specification for Hire including the current market state, our objective for Hire, and the technical requirements we foresee. Section \ref{user-interaction} details the plan for engaging users and building a world class user experience. Finally, section \ref{management-plan} show the management plan for the design, development and deployment of Hire.
+This report details \textit{SoftStart's} preliminary draft of the functional specification, user interaction plan and management plan for Hire. Section \ref{functional-spec} discusses the functional specification for Hire including the current market state, our objective for Hire, and the technical requirements we foresee. Section \ref{user-interaction} details the plan for engaging users and building a world class user experience. Finally, section \ref{management-plan} outlines the management plan for the design, development and deployment of Hire.
 
 %
 % FUNCTIONAL SPECIFICATIONS
@@ -189,15 +290,24 @@ This report details \textit{SoftStart's} preliminary draft of the functional spe
 %     efficiency, security, or reliability).
 
 % TODO: Functional Spec Introduction (Andrei)
+This section will describe in detail Hire's intended capabilities, appearance, and interactions with users. Section \ref{objectives-subsection} will cover the intended functionality and what services the application will provide to its users. Section \ref{market-subsection} will outline how we intend to differentiate ourselves from the competing applications in the hiring field. Lastly, section \ref{technical-requirements-subsection} will give insight into the hardware we are building for and the expected performance of the application.
 
-\subsection{Objectives}
+\subsection{Objectives}\label{objectives-subsection}
 
 % TODO: Objectives (Jonah)
 
-\subsection{Market Position}
+Currently there is need of a mobile job search platform that is easy to use and approachable for users of all ages. There is evidence that such an application would provide many benefits to users, as competing products lack many essential features.
+
+Hire aims to establish a strong community, in which users are able to feel confortable looking for work, or hiring others. To accomplish this, we will provide many features that allow users to get to know one another before the Hire, as well as a rating/review system after the work is completed. Over time, we hope that reviews and ratings will build up and help drive the application and it's community.
+
+Another goal of ours is to help users find the best possible options for their needs. This means that we will make suggestions based on location of users and relevance for their given skills. We want users to have the ability to quickly find work that fits their specific skills, and give employers the best fit people for their job.
+
+We believe that everyone has skills and knowledge that they may offer, and we want to provide a platform that anyone can use. We feel that people of all ages should be able to benefit from the application, and it should be as easy to use as possible. Hire will focus on providing users with a seamless and intuitive interface that can be easily navigated by those with little to no technical experience.
+
+\subsection{Market Position}\label{market-subsection}
 
 Our research has shown there are many competing applications in this market including AirTasker \cite{AirTasker}, Task Rabbit \cite{TaskRabbit}, and ThumbTack \cite{ThumbTack}. 
-Because of this pre-existing competition, we are putting a large amount of effort into finding where our application will be competitive against the current solutions. 
+Because of this pre-existing competition, we are putting a large amount of effort into finding the areas our application will be competitive against the current solutions. 
 Our application will focus on the two areas that we feel need the most improvement; monetization and task screening.
 
 The first area is monetization, many of the currently competing applications take 10\% of each sale. 
@@ -211,13 +321,13 @@ The second area is the lack of proper screening of job requests.
 The mis-classification of job requests is often stated as the largest downfall of task based hiring applications \cite{ThumbTack_sucks}. 
 Our team will focus on classifying incoming requests into the appropriate category so our clients and our users will know exactly what is requested before a Hire is made.
 
-\subsection{Technical Requirements}
+\subsection{Technical Requirements}\label{technical-requirements-subsection}
 
 % TODO: Technical Requirements (Jake)
 The technical requirements for Hire are as follows:
 
-\begin{enumerate}
-	\item The application(s) must uphold 99% uptime for any 24-hour period
+\begin{itemize}
+	\item The application(s) must uphold 99\% uptime for any 24-hour period
 	\item The applications(s) must support all current mobile and platforms.
 	\item The application(s) should utilize languages and technologies that are currently, flexible, and extensible.
 	\item The application(s) should be closed source and of standard compliance.
@@ -228,7 +338,7 @@ The technical requirements for Hire are as follows:
 	\item The application(s) data should be secured via industry standard cryptographic means.
 	\item The application(s) should support loss of internet connection and reconnect without damaging the user's experience.
 	\item The application(s) should contain a logging system which keeps track of users interactions.
-\end{enumerate}
+\end{itemize}
 
 %
 % USER INTERACTION
@@ -254,9 +364,21 @@ The technical requirements for Hire are as follows:
 
 % TODO: Target Users (Jonah)
 
+As we hope to make the application beneficial and approachable for a wide range of individuals, the target age for our application are people from ages 18 - 75. Individuals seeking work are expected to be in the ages of 18-60, while those looking to hire others are expected to be in the range of 25-75. Users may be either male or female. We also wish to target unemployed users who are in need of work and income, as well as those with  specialized skills. The following table gives a summary of our target users.
+
+\begin{center}
+  \begin{tabular}{| l | c | c |}
+  \hline
+    & Hiree & Hirer \\ \hline
+    Age & 18-60 & 25-75 \\ \hline
+    Sex & M or F & M or F \\ \hline
+    Computer Skills & Minimal & Minimal \\ \hline
+    Employment Status & Unemployed & N/A\\
+    \hline
+  \end{tabular}
+\end{center}
+
 \subsection{Environments}
-
-
 
 Hire will focus on two main environments for both hirers and hirees,
 
@@ -280,17 +402,17 @@ When a hirer is either at home or at work Hire will provide accessible and conte
 \caption{A hirer on the go}
 \end{figure}
 
-When a hirer is out on the go, perhaps traveling in a foreign city or commuting, Hire will provide contextual suggestions based on that context. This could be suggesting food delivery in the area or someone to grab you coffee as you move between meetings.
+When a hirer is out on the go, perhaps traveling in a foreign city or commuting, Hire will provide contextual suggestions based on that context. This could be suggesting food delivery in the area or someone to grab you coffee as you drive between meetings.
 
 \subsubsection{For Hirees}
 
-When a hiree is at home Hire will provide situational notifications of jobs in their area. The information made available to the hiree will be tailored based on schedule, previous experience, and interests. The hiree will have control over the these factors so they can be notified when a job appropriate for them is available.
+When a hiree is at home, Hire will provide situational notifications of jobs in their area. The information made available to the hiree will be tailored based on schedule, previous experience, and interests. The hiree will have control over the these settings so they can be notified when a job appropriate for them is available.
 
-When on the go a hiree will have the option to be made aware of local jobs that relate to their skill sets. Hirees could also be made aware of possible tasks when during a trip or commute at their discretion. For example a hiree could be notified of a food delivery on their ay home from work.
+When on the go, a hiree will have the option to be made aware of local jobs that relate to their skill sets. Hirees could also be made aware of possible tasks when during a trip or a commute at their discretion. For example a hiree could be notified of a food delivery on their ay home from work.
 
 \subsection{Scenarios}
 
-The following section details two example interactions between hirer or hirees and the Hire platform. The four scenarios are,
+The following section details two example interactions between hirer or hirees and the Hire platform. The two scenarios are,
 
 \begin{description}
     \item[Hiring from home] Sarah would like some help unclogging her shower drain which is full of hair.
@@ -311,15 +433,19 @@ Sarah's roommate has complained about the shower not draining and now Sarah is t
 
 Sarah decides to contact someone for help. She grabs the Hire app from her devices app store. Being a first time user Sarah is prompted to sign up upon opening the app. She chooses to create an account using her Facebook account and the app pulls her details from Facebook. She is then prompted to add a credit card. The interface provides either the option to fill in credit card details or to read the details off her credit card using the camera. After choosing the latter Sarah is brought to the home screen where the on boarding wizard offers to help her create her first job. 
 
-Sarah fills out the fields for job description, location (inferred by the app), offer amount, notes, and timeframe. Sarah's job is called "Clean out my shower drain", she gives it a timeframe of a couple hours and an offer amount of \$20. In the notes Sarah mentions that she already has a drain snare.
+Sarah fills out the fields for job description, location (inferred by the app), offer amount, notes, and time frame. Sarah's job is called "Clean out my shower drain", she gives it a time frame of a couple hours and an offer amount of \$20. In the notes Sarah mentions that she already has a drain snare.
 
-About twenty minutes after posting Sarah receives a notification that Joe, a hiree, has offered to do her job but for \$30. After reviewing Joe's hiring history and reviews Sarah agrees and a hold is placed for the \$30 on her credit card. Joe sends a message through Hire to Sarah asking if she has any Draino before he comes over. Sarah responds that she does and sends Joe her address. 
+About twenty minutes after posting Sarah receives a notification that Joe, a hiree, has offered to do her job but for \$30. After reviewing Joe's hiring history and reviews, Sarah agrees and a hold is placed for the \$30 on her credit card. Joe sends a message through Hire to Sarah asking if she has any Draino before he comes over. Sarah responds that she does and sends Joe her address. 
 
-Joe shows up a half hour later and gets started cleaning out the drain while Sarah watches TV in the other room. When Joe's done he marks the job done on his phone and logs a picture with the app. Sarah is notified and also marks it as done which transfers the funds to Joe's PayPal. Joe leaves and a little while later Sarah is prompted to fill out feedback for Joe, she gives him five stars.
+Joe shows up a half hour later and gets started cleaning out the drain while Sarah watches TV in the other room. When Joe's done he marks the job done on his phone and logs a picture with the app. Sarah is notified and also marks it as done which transfers the funds to Joe's PayPal. Joe leaves and a little while later Sarah is prompted to fill out feedback for Joe, she gives him five stars for his prompt service and cheerful attitude.
 
 \subsubsection{Getting Hired on the Go}
 
+Andy has about an hour left at his work when he gets a notification from the Hire app. Someone nearby would like their dry cleaning picked up and delivered and it's on Andy's route home from work. The job is offering \$15 and, after opening the notification, Andy accepts. He sends a message to Dan, the Hirer, saying he will drop the dry cleaning off in about an hour when he's off work. Dan responds and sends Andy the confirmation number and address to pick up the dry cleaning.
 
+Andy gets off work and drives to the dry cleaners. He picks up the clothes and heads to Dan's place. He arrives and gives Dan the dry cleaning. On the way back to his car, Andy marks the job as done. Several minutes later he's notified that Dan did as well and the funds are deposited into Andy's PayPal account. Andy is offered the chance to offer feedback for Dan and gives him five stars for being prompt and responsive.
+
+A couple weeks later, once Andy has been hired by a few different hirers, he gets a summary of his feedback in his email. He sees that he received all good feedback. 
 
 %
 % MANAGEMENT PLAN
@@ -343,18 +469,73 @@ Joe shows up a half hour later and gets started cleaning out the drain while Sar
 
 % TODO: Features (Jake)
 
-\subsection{Architecture}
+Hire will include a variety of features, including but not limited to:
 
-% TODO: Architecture (Jake)
+\begin{description}
+	\item[Hire Board] A board that contains all of the jobs Hirer's have posted around you.
+	\item[Hire Map] A map which contains way point representations of the jobs in the Hirer Board. Clicking on a way point reveals the job and it's payout. Way points are color coded using a legend ranging from manual labour to desk work.
+	\item[Flexible Payment System] Take payments through many platforms, including PayPal, Coinbase, or direct Bitcoin wallet transfer.
+	\item[Hirer/Hiree Feedback System] Through the rating system, hirers and hirees can rate each other and give feedback for future job seekers to look over when making their decision.
+	\item[Social Media Authentication] Authentication with Facebook, Google, and Twitter APIs.
+	\item[Credit Card Scanning] Using your mobile camera, scan in your credit card to process payments quickly and save your information for later.
+	\item[HireChat] An integrated chat service that allows hirers and hirees to converse seamlessly over the Internet to determine if adequate service can be provided.
+	\item[Escrow Payment System] When a hirer and a hiree have agreed on a task, the hirer will escrow a payment to the application, which will hold funds until the task has been completed by the hirer.
+	\item[Photo-Acknowledge Confirmation] When hirees are finished their task, they take a picture of their completed activity. The hirers will then confirm the task and payment will leave escrow.
+\end{description}
 
 \subsection{Implementation}
 
-Our technology stack will be organized into a client server model. 
-Connections will be initiated through a frontend (either Android or IOS) and requests will be handled by a server written in Scala \cite{scala}. 
+Our technology stack will be organized into a \gls{client} \gls{server} model. Connections will be initiated through a \gls{frontend} (either \gls{android} or \gls{ios}) with all data being saved into a single \gls{database}. 
 
-This server will be securely hosted by Digital Ocean and will be implemented with horizontal scaling as a top priority. This means that instead of moving our server to a more powerful machine as we get more traffic, we will simply add more machines and split the load between them.
+This \gls{server} will be securely hosted by \gls{digitalocean} and will be implemented with \gls{hscaling} as a top priority. This means that instead of moving our \gls{server} to a more powerful machine as we get more traffic, we will simply add more \glspl{server} and split the load between them.
 
-The final piece will be handling monetary transactions, which will be completed using thethe PayPal REST API \cite{paypal}. Using a mature service like PayPal will ensure that monetary transactions are fast secure and simple.
+
+\subsubsection{Front End}
+
+The front end is an interface between the \gls{client} and the \gls{server} in the Hire App our front ends will be either \gls{android} or \gls{ios}. Giving the consumer the option of using either of the most widely used mobile operating systems will give our application the largest userbase.
+
+\paragraph{Web Implementation}
+\hfill \break
+
+The web implementation front end will be implemented in React, utilizing Immutable.js to improve the speed and rendering of the DOM elements. The web platform can be written to be \gls{responsive} if some additional work and planning is done. Developing a web application is significantly easier than other methods of distribution, but is also significantly less affective in user retention and generation.
+
+\paragraph{Mobile Implementation}
+\hfill \break
+
+Mobile implementation can be implemented via Android and iOS support. Developing on iOS and Android allows users to download the app from their respective platform app store and provide the user a quick access to Hire. This advantage makes the user far more inclined to keep using the application once they download it, as it is readily available for use. Furthermore, building an iOS and Android application allows Hire to push notifications directly to the users phone, notifying them instantly when users are trying to connect with them, jobs have been completed, or new jobs are posted in their area.
+
+\subsubsection{Back End}
+
+Our application will require substantial logic on the \gls{server}. We have chosen two programming languages as the possible candidates for our backend. These are outlined below with a breif description of their pros and cons.
+
+\paragraph{Scala}
+\hfill \break
+
+Scala is a programming language that focuses on \gls{hscaling}. If this language is chosen it will make the application fast, efficient and easy to scale by adding more machines. The downside is that this is a \gls{typed-lang} which makes prototyping more difficult. Furthermore, the semi-functional nature of Scala makes it more complex to write than other alternatives.
+
+\paragraph{Node}
+\hfill \break
+
+Node.js is a framework that allows developers to write a \gls{backend} service in JavaScript, a historically front end language. Node.js is quick to setup, and very easy to use: A simple web server can be stood up in less than five minutes. Since JavaScript is a interpreted language, it is not plagued with the same issues as Scala, a \gls{typed-lang}. Node.js excels in operations which require minimal computation, but falls short when any extensive computation is involved.
+
+\subsubsection{Database}
+
+\paragraph{MongoDB}
+\hfill \break
+
+MongoDB is a \gls{non-relational} database which focuses on making data easy to store and access. This makes Mongo a great database for prototyping but it is also noted as being a poor performer when used in applications as they scale.
+
+\paragraph{CockroachDB}
+\hfill \break
+
+Cockroach is a \gls{relational} database which is \gls{scalable} and extremely flexible in the number of servers required to run it. If one server goes down, cockroach will automatically distribute the load to another. Relational databases offer a speed that cannot be matched by non-relational databases, at a cost of more upfront work when it comes to extracting and adding information to the system.
+
+\subsubsection{ECommerce}
+
+Monetary transactions will be completed using the \gls{paypal} or Coinbase \gls{rest} \gls{api} \cite{paypal}. Using either of these services will ensure that monetary transactions are fast, secure and simple. This will also offset the amount of time we spend setting up commerce
+
+User security and privacy is a top concern for this application. 
+
 
 %
 % SUMMARY
@@ -362,6 +543,14 @@ The final piece will be handling monetary transactions, which will be completed 
 \section{Summary}
 
 % TODO: Summary (Jonah)
+
+Hire is a community driven job search platform, where users can search for jobs, or hire others in their area to do work. It's main goal is to provide a comfortable user experience, and develop a trusting community through the application.
+
+While there are currently other similar application on the market, Hire will stand out for its secure payment system, precise job classifications, and rating system. Hire also wishes to target a very wide range of users, and create an intuitive application that virtually anyone can use.
+
+As we expect the user base of Hire to grow over time, scalability and maintainability will be a major focus throughout it's development. Security will also be our goal, as we plan on supporting authentication services and a secure payment method via Paypal.
+
+Hire will be built as a mobile application and will be supported by Android and IOS devices. This will give users the flexibility of finding jobs wherever they may be. Due to its easy to use interface and refined classification system, users will be able to quickly find appropriate work in a very short amount of time.
 
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
